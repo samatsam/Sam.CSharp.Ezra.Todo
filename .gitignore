@@ -1,0 +1,50 @@
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.db
+*.db-shm
+*.db-wal
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.env
+.env.local
+.DS_Store
+coverage/
+*.local
+
+# Logs
+logs/
+*.log
+
+# Editor
+.ai/*
+.vscode/*
+!.vscode/extensions.json
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.output.txt
+
+# Rider/IDEA specific
+.idea/**/shelf/
+.idea/**/modules.xml
+.idea/**/contentModel.xml
+.idea/**/workspace.xml
+.idea/**/.idea.Sam.CSharp.Ezra.Todo.iml
+.idea/**/projectSettingsUpdater.xml
+.idea/**/queries/
+.idea/**/dataSources/
+.idea/**/dataSources.local.xml
+.idea/**/httpRequests/
