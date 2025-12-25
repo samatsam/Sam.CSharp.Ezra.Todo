@@ -1,0 +1,29 @@
+{
+  "name": "todo-root",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "Sam.TypeScript.Ezra.Todo.Client"
+  ],
+  "scripts": {
+    "install": "node -e \"require('child_process').spawnSync(process.platform === 'win32' ? 'scripts\\\\install.bat' : 'scripts/install.sh', { shell: true, stdio: 'inherit' });\"",
+    "frontend:install": "npm install --workspace=Sam.TypeScript.Ezra.Todo.Client",
+    "frontend:build": "npm run build --workspace=Sam.TypeScript.Ezra.Todo.Client",
+    "frontend:lint": "npm run lint --workspace=Sam.TypeScript.Ezra.Todo.Client -- --fix",
+    "frontend:test": "npm run test --workspace=Sam.TypeScript.Ezra.Todo.Client",
+    "frontend:run": "npm run dev --workspace=Sam.TypeScript.Ezra.Todo.Client",
+    "frontend": "npm run frontend:install && npm run frontend:run",
+    "backend:test": "dotnet test Sam.CSharp.Ezra.Todo.Server.Tests",
+    "backend": "dotnet run --project Sam.CSharp.Ezra.Todo.Server",
+    "test": "npm run backend:test && npm run frontend:test",
+    "start": "start npm run backend & start npm run frontend",
+    "pre-commit": "husky"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "husky": "^9.1.7",
+    "prettier": "^3.7.4"
+  }
+}

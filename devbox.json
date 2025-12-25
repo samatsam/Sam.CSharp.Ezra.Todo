@@ -1,0 +1,14 @@
+﻿{
+  "packages": [
+    "dotnet-sdk_10",
+    "nodejs_22"
+  ],
+  "shell": {
+    "init_hook": [
+      "export TODO_DEVBOX_SHELL=1",
+      "echo 'Welcome to the Todo Application development environment!'",
+      "dotnet --version",
+      "node --version"
+    ]
+  }
+}
