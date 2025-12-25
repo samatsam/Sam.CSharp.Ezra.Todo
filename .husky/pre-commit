@@ -1,0 +1,3 @@
+npm run frontend:lint
+npm run frontend:test
+npm run backend:test
